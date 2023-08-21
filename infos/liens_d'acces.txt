@@ -1,0 +1,19 @@
+
+Lien d'accès vers le brief :
+https://simplonline.co/briefs/84af9c89-8de3-43ed-86ee-eaf32a5744ea
+
+
+Lien d'accès vers le repository GitHub :
+https://github.com/Alibouchakour/brief_memory
+
+
+Lien d'accès vers Vite :
+https://stackblitz.com/edit/vitejs-vite-r4kd6e?file=index.html&terminal=dev
+
+
+
+
+Pour récupérer l'url du site généré avec Vite :
+npm run dev (à la racine de mon projet)
+
+http://localhost:5173/
