@@ -1,9 +1,0 @@
-
-Lien d'accès vers le brief :
-https://simplonline.co/briefs/30e9dcc6-a95a-48b5-b1b9-b10d76eb79ed
-
-Lien d'accès vers le repository GitHub :
-https://github.com/JeremyFelix720/brief_to_do_list
-
-Adresse url du site (en local) :
-
