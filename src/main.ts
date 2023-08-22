@@ -55,5 +55,17 @@ addButton?.addEventListener('click', function() {
 
 });
 
+const deleteAllTasksButton = document.createElement("button");
+deleteAllTasksButton?.setAttribute('id', 'delete_all_tasks_button');
+deleteAllTasksButton.innerText = "Supprimer toutes les taches";
+document.getElementById('app')?.appendChild(deleteAllTasksButton);
+
+deleteAllTasksButton?.addEventListener('click', function() {
+  let allArchivedTaskBlock = Array.from(document.querySelectorAll('.archived_task_block')); // je selectionne tous mes éléments avec la classe "archived_task_block" puis je transforme ma selection en un tableau. 
+  allArchivedTaskBlock?.forEach(element => {
+    element.remove();
+  });
+});
+
 /*<input type="checkbox" id="scales" name="scales" checked />
   <label for="scales">Scales</label>*/

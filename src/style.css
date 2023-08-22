@@ -148,6 +148,12 @@ fieldset legend {
   color: white;
 }
 
+#delete_all_tasks_button {
+  background-color: red;
+  color: white;
+  margin-top: 30px;
+}
+
 #list_section {
   /*display: flex;
   flex-direction: column;

@@ -5,5 +5,8 @@ https://simplonline.co/briefs/30e9dcc6-a95a-48b5-b1b9-b10d76eb79ed
 Lien d'accès vers le repository GitHub :
 https://github.com/JeremyFelix720/brief_to_do_list
 
-Adresse url du site (en local) :
+Adresse URL du site (en local) :
 http://localhost:5174/
+
+Adresse URL du site (en ligne) :
+https://brief-to-do-list.vercel.app/
