@@ -1,29 +1,4 @@
 import './style.css'
-/*
-import typescriptLogo from './typescript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.ts'
-
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://www.typescriptlang.org/" target="_blank">
-      <img src="${typescriptLogo}" class="logo vanilla" alt="TypeScript logo" />
-    </a>
-    <h1>Vite + TypeScript</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite and TypeScript logos to learn more
-    </p>
-  </div>
-`
-
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
-*/
 
 let addInput = document.querySelector('#add_input') as HTMLInputElement;
 let addButton = document.querySelector('#add_button') as HTMLButtonElement;
@@ -32,18 +7,15 @@ let taskRank = 0;
 let idTaskBlockCreation = "";
 
 addButton?.addEventListener('click', function() {
-  
-  console.log("Je clique sur le bouton valider");
+  //console.log("Je clique sur le bouton valider");
   
   newTaskText = addInput.value;
-
-  console.log(newTaskText);
+  //console.log(newTaskText);
 
   if (newTaskText !== "") {
 
     idTaskBlockCreation = "rank_" + taskRank;
-
-    console.log(idTaskBlockCreation);
+    //console.log(idTaskBlockCreation);
 
     const archivedTaskBlock = document.createElement("article"); // Je crée le conteneur d'un élément listé.
     archivedTaskBlock?.setAttribute('class', 'archived_task_block'); // Je lui rajoute une classe.
@@ -52,7 +24,7 @@ addButton?.addEventListener('click', function() {
 
     const archivedTaskCheckbox = document.createElement("input");
     archivedTaskCheckbox?.setAttribute('type', 'checkbox');
-    //archivedTaskCheckbox?.setAttribute('class', 'checkbox');
+    archivedTaskCheckbox?.setAttribute('class', 'archived_task_checkbox');
     document.getElementById(idTaskBlockCreation)?.appendChild(archivedTaskCheckbox);
 
     const archivedTaskText = document.createElement("label");
@@ -66,13 +38,22 @@ addButton?.addEventListener('click', function() {
     deleteButton.innerText = "Supprimer";
     document.getElementById(idTaskBlockCreation)?.appendChild(deleteButton);
 
+    deleteButton?.addEventListener('click', function() { // J'écoute l'évenement click sur le bouton juste après l'avoir créé.
+      this.parentElement?.remove(); // Je selectionne son élément parent et je le supprime.
+    });
+
     addInput.value = "";
-
-    /*<input type="checkbox" id="scales" name="scales" checked />
-    <label for="scales">Scales</label>*/
-
-
     taskRank += 1;
   }
 
+  let archivedTaskCheckboxSelection = document.querySelector('#' + idTaskBlockCreation + ' .archived_task_checkbox') as HTMLInputElement;
+
+  archivedTaskCheckboxSelection?.addEventListener('click', function() {
+    let archivedTaskTextSelection = archivedTaskCheckboxSelection.nextElementSibling as HTMLLabelElement;
+    archivedTaskTextSelection.classList.toggle("checked_archived_task"); // J'ajoute la classe "checked_archived_task" si elle n'existe pas sur l'élément. Sinon, je la supprime.
+  });
+
 });
+
+/*<input type="checkbox" id="scales" name="scales" checked />
+  <label for="scales">Scales</label>*/

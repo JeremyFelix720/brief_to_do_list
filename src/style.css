@@ -172,7 +172,7 @@ fieldset legend {
   min-height: 40px;
 }
 
-.archived_task_block input {
+.archived_task_checkbox {
   max-width: 5%;
   margin-right: 15px;
 }
@@ -188,4 +188,9 @@ fieldset legend {
   margin-left: 15px;
   background-color: red;
   color: white;
+}
+
+.checked_archived_task {
+  color: grey;
+  text-decoration: line-through;
 }
