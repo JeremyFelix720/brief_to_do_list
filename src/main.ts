@@ -29,17 +29,17 @@ addButton?.addEventListener('click', function() {
 
     const archivedTaskText = document.createElement("label");
     //archivedTaskText?.setAttribute('for', 'checkbox');
-    archivedTaskText?.setAttribute('class', '.archived_task_text');
+    archivedTaskText?.setAttribute('class', 'archived_task_text');
     archivedTaskText.innerText = newTaskText;
     document.getElementById(idTaskBlockCreation)?.appendChild(archivedTaskText);
 
     const deleteButton = document.createElement("button");
     deleteButton?.setAttribute('class', 'delete_button');
-    deleteButton.innerText = "Supprimer";
+    deleteButton.innerText = "X";
     document.getElementById(idTaskBlockCreation)?.appendChild(deleteButton);
 
     deleteButton?.addEventListener('click', function() { // J'écoute l'évenement click sur le bouton juste après l'avoir créé.
-      this.parentElement?.remove(); // Je selectionne son élément parent et je le supprime.
+      this.parentElement?.remove(); // Je sélectionne son élément parent et je le supprime.
     });
 
     addInput.value = "";
@@ -66,6 +66,3 @@ deleteAllTasksButton?.addEventListener('click', function() {
     element.remove();
   });
 });
-
-/*<input type="checkbox" id="scales" name="scales" checked />
-  <label for="scales">Scales</label>*/

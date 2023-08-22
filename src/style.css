@@ -124,7 +124,6 @@ fieldset legend {
 }
 
 #app {
-  max-width: 800px;
   margin: auto;
   padding: 0px;
   width: 100%;
@@ -135,14 +134,14 @@ fieldset legend {
 }
 
 #add_input {
-  width: 85%;
+  width: 90%;
   margin-right: 15px;
   padding: 15px;
   border-radius: 10px;
 }
 
 #add_button {
-  width: 15%;
+  min-width: 80px;
   padding: 10px;
   background-color: green;
   color: white;
@@ -173,7 +172,7 @@ fieldset legend {
   margin: 15px 0px;
   border-radius: 15px;
   background-color: lightgray;
-  max-width: 760px;
+  max-width: 100%;
   /*width: 100%;*/
   min-height: 40px;
 }
@@ -199,4 +198,24 @@ fieldset legend {
 .checked_archived_task {
   color: grey;
   text-decoration: line-through;
+}
+
+@media (max-width: 1080px) {
+
+  #app {
+    max-width: 100%;
+  };
+
+  .archived_task_block {
+    max-width: 100%;
+  }
+
+}
+
+@media (min-width: 1080px) {
+
+  #app {
+    max-width: 800px;
+  };
+  
 }
